@@ -7,15 +7,14 @@ cantidad = document.querySelector(".cantidad").innerHTML;
 
 function mas() {
     ++cantidad;
-    valor = document.querySelector(".cantidad").innerHTML = cantidad;
+    document.querySelector(".cantidad").innerHTML = cantidad;
 
-    total = valor;
-    pagar = total.innerHTML;
-    pagar = precio * valor;
-    document.querySelector(".valor-total").innerHTML = pagar;
+    monto = precio * cantidad;
+    document.querySelector(".valor-total").innerHTML = monto;
 }
 
 function menos() {
+    if (cantidad <= 0) return;
     --cantidad;
     document.querySelector(".cantidad").innerHTML = cantidad;
 
